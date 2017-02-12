@@ -31,28 +31,28 @@
         </div>
     </section>
     <br/><br/>
-    <div class="container">
+    <div th:each="book : ${books}" class="container">
         <section>
             <div class="tile is-ancestor">
                 <div class="tile is-parent">
                     <div class="tile is-child box">
                         <figure class="image is-1by1">
-                            <img src="http://bulma.io/images/placeholders/640x480.png" />
+                            <img th:src="${book.imagePath}" />
                         </figure>
                     </div>
                 </div>
                 <div class="tile is-8 is-vertical is-parent">
                     <div class="tile is-child box">
                         <p class="title is-5"><strong>Title</strong></p>
-                        <p>Lorem Ipsum</p>
+                        <p th:text="${book.name}" />
                     </div>
                     <div class="tile is-child box">
                         <p class="title is-5"><strong>Loan status</strong></p>
-                        <p>Available</p>
+                        <p th:text="${book.loanStatus}" />
                     </div>
                     <div class="tile is-child box">
                         <p class="title is-5"><strong>Rating</strong></p>
-                        <p>3 starts</p>
+                        <p th:text="${book.rating}" />
                     </div>
                 </div>
             </div>
@@ -60,13 +60,13 @@
                 <div class="tile is-parent">
                     <div class="tile is-child box">
                         <p class="title is-5"><strong>Description</strong></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat odio felis, vel bibendum justo pulvinar nec. Nam et consectetur turpis, sed venenatis diam. Nunc consectetur ultrices nisl venenatis venenatis. Integer venenatis suscipit lorem quis varius. Aliquam quis erat erat. Nunc aliquet nulla in turpis imperdiet, eget condimentum tellus ornare. Pellentesque fringilla dictum massa, et dapibus purus elementum vitae. Aliquam erat volutpat. Donec libero ante, molestie porta odio ut, lobortis finibus urna. Aenean interdum massa elit, ut feugiat urna rhoncus eu. Morbi ac ex ut lorem cursus congue. Mauris dignissim libero et ullamcorper bibendum. Ut turpis metus, viverra et cursus eget, suscipit ut arcu. Morbi sit amet vehicula est. Quisque sodales sapien elit, in pharetra erat elementum ut. In hac habitasse platea dictumst.</p>
+                        <p th:text="${book.description}" />
                     </div>
                 </div>
             </div>
         </section>
+        <hr />
     </div>
-
 
     <footer class="footer">
         <div class="container">
