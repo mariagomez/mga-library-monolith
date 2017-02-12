@@ -26,6 +26,16 @@ repositories {
 	mavenCentral()
 }
 
+test {
+	dependsOn 'cleanTest'
+	testLogging {
+		showStandardStreams = true
+		displayGranularity = 2
+		exceptionFormat = 'full'
+		events 'started', 'passed', 'failed'
+	}
+}
+
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web") {
 		exclude module: "spring-boot-starter-tomcat"
