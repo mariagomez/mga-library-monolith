@@ -18,8 +18,71 @@
     <![endif]-->
 </head>
 <body>
-    <div class="box">
-        <p class="title" th:text="'Welcome to the MGA Library!'" />
+    <section class="hero is-info is-medium">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-2">
+                    Welcome to the MGA Library!
+                </h1>
+                <h2 class="subtitle is-3">
+                    Catalog
+                </h2>
+            </div>
+        </div>
+    </section>
+    <br/><br/>
+    <div class="container">
+        <section>
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <figure class="image is-1by1">
+                            <img src="http://bulma.io/images/placeholders/640x480.png" />
+                        </figure>
+                    </div>
+                </div>
+                <div class="tile is-8 is-vertical is-parent">
+                    <div class="tile is-child box">
+                        <p class="title is-5"><strong>Title</strong></p>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <p class="title is-5"><strong>Loan status</strong></p>
+                        <p>Available</p>
+                    </div>
+                    <div class="tile is-child box">
+                        <p class="title is-5"><strong>Rating</strong></p>
+                        <p>3 starts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <p class="title is-5"><strong>Description</strong></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat odio felis, vel bibendum justo pulvinar nec. Nam et consectetur turpis, sed venenatis diam. Nunc consectetur ultrices nisl venenatis venenatis. Integer venenatis suscipit lorem quis varius. Aliquam quis erat erat. Nunc aliquet nulla in turpis imperdiet, eget condimentum tellus ornare. Pellentesque fringilla dictum massa, et dapibus purus elementum vitae. Aliquam erat volutpat. Donec libero ante, molestie porta odio ut, lobortis finibus urna. Aenean interdum massa elit, ut feugiat urna rhoncus eu. Morbi ac ex ut lorem cursus congue. Mauris dignissim libero et ullamcorper bibendum. Ut turpis metus, viverra et cursus eget, suscipit ut arcu. Morbi sit amet vehicula est. Quisque sodales sapien elit, in pharetra erat elementum ut. In hac habitasse platea dictumst.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                    is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+                </p>
+                <p>
+                    <a class="icon" href="https://github.com/jgthms/bulma">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
