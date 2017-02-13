@@ -29,4 +29,23 @@ public class Book {
         this.imagePath = imagePath;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public String getLoanStatus() {
+        return loanStatus;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
 }
