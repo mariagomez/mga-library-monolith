@@ -36,8 +36,8 @@
             <div class="tile is-ancestor">
                 <div class="tile is-parent">
                     <div class="tile is-child box">
-                        <figure class="image is-1by1">
-                            <img th:src="${book.imagePath}" />
+                        <figure class="image">
+                            <img th:src="@{/images/} + ${book.imagePath}" />
                         </figure>
                     </div>
                 </div>
@@ -45,6 +45,10 @@
                     <div class="tile is-child box">
                         <p class="title is-5"><strong>Title</strong></p>
                         <p th:text="${book.name}" />
+                    </div>
+                    <div class="tile is-child box">
+                        <p class="title is-5"><strong>Author</strong></p>
+                        <p th:text="${book.author}" />
                     </div>
                     <div class="tile is-child box">
                         <p class="title is-5"><strong>Loan status</strong></p>

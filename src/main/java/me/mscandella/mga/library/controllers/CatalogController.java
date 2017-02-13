@@ -22,7 +22,7 @@ public class CatalogController {
     public String catalog(ModelMap model) {
         Iterable<Item> items = bookRepository.findAll();
         List<Book> books = StreamSupport.stream(items.spliterator(), false)
-                .map(item -> new Book(item.getId(), item.getName(), item.getDescription(), item.getRating(),
+                .map(item -> new Book(item.getId(), item.getName(), item.getAuthor(), item.getDescription(), item.getRating(),
                         item.getImagePath(), item.getLoanStatus()))
                 .collect(Collectors.toList());
         model.addAttribute("books", books);

@@ -1,9 +1,6 @@
 package me.mscandella.mga.library.dao;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Item {
@@ -13,6 +10,8 @@ public class Item {
     private Long id;
 
     private String name;
+    private String author;
+    @Lob
     private String description;
     private String rating;
     private String loanStatus;
@@ -21,12 +20,17 @@ public class Item {
     protected Item() {
     }
 
-    public Item(String name, String description, String rating, String loanStatus, String imagePath) {
+    public Item(String name, String author, String description, String rating, String loanStatus, String imagePath) {
         this.name = name;
+        this.author = author;
         this.description = description;
         this.rating = rating;
         this.loanStatus = loanStatus;
         this.imagePath = imagePath;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 
     public String getName() {

@@ -39,8 +39,9 @@ public class CatalogControllerTest {
         String rating = "3 starts";
         String imagePath = "http://bulma.io/images/placeholders/640x480.png";
         String loanStatus = "Available";
-        Item item = new Item(name, description, rating, loanStatus, imagePath);
-        Book book = new Book(item.getId(), name, description, rating, imagePath, loanStatus);
+        String author = "Lorem Ipsum Dolor";
+        Item item = new Item(name, author, description, rating, loanStatus, imagePath);
+        Book book = new Book(item.getId(), name, author, description, rating, imagePath, loanStatus);
         Iterable<Item> items = Arrays.asList(item);
         when(bookRepository.findAll()).thenReturn(items);
 
