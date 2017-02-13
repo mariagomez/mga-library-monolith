@@ -21,7 +21,7 @@ values ('Ulysses',
 'James Joyce',
 'One of the most important works of the Modernist era, James Joyce''s "Ulysses" was originally published serially in the American journal "The Little Review" from March 1918 to December 1920. Subsequently published as a book in 1922, "Ulysses" chronicles the passage of Leopold Bloom through Dublin during an ordinary day, June 16, 1904. While the novel appears largely unstructured at first glance it is in fact very closely paralleled to Homer''s "Odyssey," containing eighteen episodes that correspond to various parts of Homer''s work. Errors within the text have resulted in multiple publications of revised editions over the course of the 20th-century. These efforts at revision, however, are not universally accepted as beneficial with some critics pointing to the original 1922 edition, from which this edition is drawn, as the most accurate of all editions. Filled with experimental forms of prose, stream of consciousness, puns, parodies, and allusions that Joyce himself hoped would "keep the professors busy for centuries arguing over what I meant," this expansive work is considered one of the great works of English literature and a must read for fans of the Modernist genre.',
 3,
-'Available',
+'Not Available',
 'ulysses.jpg');
 
 insert into ITEM (name, author, description, rating, loan_status, image_Path)
@@ -37,5 +37,5 @@ values ('David Copperfield',
 'Charles Dickens',
 'This is the novel Dickens regarded as his "favourite child" and is considered his most autobiographical. As David recounts his experiences from childhood to the discovery of his vocation as a successful novelist, Dickens draws openly and revealingly on his own life. Among the gloriously vivid cast of characters are Rosa Dartle, Dora, Steerforth, and the ''umble Uriah Heep, along with Mr. Micawber, a portrait of Dickens''s own father that evokes a mixture of love, nostalgia, and guilt.',
 5,
-'Available',
+'Not Available',
 'davidCopperfield.jpg');

@@ -7,16 +7,16 @@ public class Book {
     private final String description;
     private final int rating;
     private final String imagePath;
-    private final String loanStatus;
+    private final boolean available;
 
-    public Book(Long id, String name, String author, String description, int rating, String imagePath, String loanStatus) {
+    public Book(Long id, String name, String author, String description, int rating, String imagePath, boolean available) {
         this.id = id;
         this.name = name;
         this.author = author;
         this.description = description;
         this.rating = rating;
         this.imagePath = imagePath;
-        this.loanStatus = loanStatus;
+        this.available = available;
     }
 
     public Long getId() {
@@ -43,7 +43,7 @@ public class Book {
         return imagePath;
     }
 
-    public String getLoanStatus() {
-        return loanStatus;
+    public boolean isAvailable() {
+        return available;
     }
 }

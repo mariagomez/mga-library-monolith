@@ -14,18 +14,18 @@ public class Item {
     @Lob
     private String description;
     private int rating;
-    private String loanStatus;
+    private boolean available;
     private String imagePath;
 
     protected Item() {
     }
 
-    public Item(String name, String author, String description, int rating, String loanStatus, String imagePath) {
+    public Item(String name, String author, String description, int rating, boolean available, String imagePath) {
         this.name = name;
         this.author = author;
         this.description = description;
         this.rating = rating;
-        this.loanStatus = loanStatus;
+        this.available = available;
         this.imagePath = imagePath;
     }
 
@@ -45,8 +45,8 @@ public class Item {
         return rating;
     }
 
-    public String getLoanStatus() {
-        return loanStatus;
+    public boolean isAvailable() {
+        return available;
     }
 
     public String getImagePath() {
