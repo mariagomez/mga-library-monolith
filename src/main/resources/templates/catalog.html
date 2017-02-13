@@ -52,16 +52,20 @@
                         <p th:text="${book.author}" />
                     </div>
                     <div class="tile is-child box">
-                        <p class="title is-5"><strong>Loan status</strong></p>
-                        <p th:text="(${book.available} ? 'Available' : 'Not Available')" />
-                    </div>
-                    <div class="tile is-child box">
                         <p class="title is-5"><strong>Rating</strong></p>
                         <p>
                             <span class="icon" th:each="star:${#numbers.sequence(1,book.rating)}">
                                 <img class="image is-" th:src="@{images/star.jpg}" />
                             </span>
                         </p>
+                    </div>
+                    <div>
+                        <div th:if="${book.available}">
+                            <a class="button is-primary is-large">Borrow</a>
+                        </div>
+                        <div th:unless="${book.available}">
+                            <span class="tag is-dark is-large">Not Available</span>
+                        </div>
                     </div>
                 </div>
             </div>
