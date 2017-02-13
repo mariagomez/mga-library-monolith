@@ -1,6 +1,7 @@
 package me.mscandella.mga.library.controllers;
 
-import me.mscandella.mga.library.dao.Book;
+import me.mscandella.mga.library.dao.Item;
+import me.mscandella.mga.library.models.Book;
 import me.mscandella.mga.library.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,9 +20,10 @@ public class CatalogController {
 
     @RequestMapping("/catalog")
     public String catalog(ModelMap model) {
-        Iterable<Book> bookIterable = bookRepository.findAll();
-        List<me.mscandella.mga.library.models.Book> books = StreamSupport.stream(bookIterable.spliterator(), false)
-                .map(book -> new me.mscandella.mga.library.models.Book(book.getName(), book.getDescription(), book.getRating(), book.getImagePath(), book.getLoanStatus()))
+        Iterable<Item> items = bookRepository.findAll();
+        List<Book> books = StreamSupport.stream(items.spliterator(), false)
+                .map(item -> new Book(item.getId(), item.getName(), item.getDescription(), item.getRating(),
+                        item.getImagePath(), item.getLoanStatus()))
                 .collect(Collectors.toList());
         model.addAttribute("books", books);
         return "catalog";

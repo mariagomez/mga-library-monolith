@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Book {
+public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,10 +18,10 @@ public class Book {
     private String loanStatus;
     private String imagePath;
 
-    protected Book() {
+    protected Item() {
     }
 
-    public Book(String name, String description, String rating, String loanStatus, String imagePath) {
+    public Item(String name, String description, String rating, String loanStatus, String imagePath) {
         this.name = name;
         this.description = description;
         this.rating = rating;
@@ -47,5 +47,9 @@ public class Book {
 
     public String getImagePath() {
         return imagePath;
+    }
+
+    public Long getId() {
+        return id;
     }
 }

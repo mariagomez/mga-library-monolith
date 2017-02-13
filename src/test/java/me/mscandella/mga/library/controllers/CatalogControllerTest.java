@@ -1,5 +1,6 @@
 package me.mscandella.mga.library.controllers;
 
+import me.mscandella.mga.library.dao.Item;
 import me.mscandella.mga.library.models.Book;
 import me.mscandella.mga.library.repositories.BookRepository;
 import org.junit.Test;
@@ -38,11 +39,10 @@ public class CatalogControllerTest {
         String rating = "3 starts";
         String imagePath = "http://bulma.io/images/placeholders/640x480.png";
         String loanStatus = "Available";
-        Book book = new Book(name, description, rating, imagePath, loanStatus);
-        me.mscandella.mga.library.dao.Book bookDAO =
-                new me.mscandella.mga.library.dao.Book(name, description, rating, loanStatus, imagePath);
-        Iterable<me.mscandella.mga.library.dao.Book> books = Arrays.asList(bookDAO);
-        when(bookRepository.findAll()).thenReturn(books);
+        Item item = new Item(name, description, rating, loanStatus, imagePath);
+        Book book = new Book(item.getId(), name, description, rating, imagePath, loanStatus);
+        Iterable<Item> items = Arrays.asList(item);
+        when(bookRepository.findAll()).thenReturn(items);
 
         MvcResult mvcResult = mockMvc.perform(get("/catalog"))
                 .andExpect(view().name("catalog"))
