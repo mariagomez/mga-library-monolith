@@ -10,6 +10,10 @@ buildscript {
 	}
 }
 
+plugins {
+	id "org.sonarqube" version "2.2"
+}
+
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
@@ -41,6 +45,8 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-starter-jetty")
 	// end::jetty[]
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile("org.springframework.boot:spring-boot-starter-data-jpa")
+	compile("com.h2database:h2")
 	testCompile("junit:junit")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
