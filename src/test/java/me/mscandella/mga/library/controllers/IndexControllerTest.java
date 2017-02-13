@@ -15,9 +15,7 @@ import java.util.List;
 import static org.hamcrest.Matchers.samePropertyValuesAs;
 import static org.junit.Assert.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(controllers = IndexController.class)
@@ -28,8 +26,8 @@ public class IndexControllerTest {
 
     @Test
     public void shouldReturnAListOfBooks() throws Exception {
-        MvcResult mvcResult = mockMvc.perform(get("/"))
-                .andExpect(view().name("Index"))
+        MvcResult mvcResult = mockMvc.perform(get("/index"))
+                .andExpect(view().name("index"))
                 .andExpect(status().isOk())
                 .andExpect(model().hasNoErrors())
                 .andReturn();
