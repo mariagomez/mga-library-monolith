@@ -29,8 +29,6 @@ repositories {
 test {
 	dependsOn 'cleanTest'
 	testLogging {
-		showStandardStreams = true
-		displayGranularity = 2
 		exceptionFormat = 'full'
 		events 'started', 'passed', 'failed'
 	}
