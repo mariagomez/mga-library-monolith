@@ -3,13 +3,13 @@ package me.mscandella.mga.library.models;
 public class Book {
     private Long id;
     private final String name;
-    private String author;
+    private final String author;
     private final String description;
-    private final String rating;
+    private final int rating;
     private final String imagePath;
     private final String loanStatus;
 
-    public Book(Long id, String name, String author, String description, String rating, String imagePath, String loanStatus) {
+    public Book(Long id, String name, String author, String description, int rating, String imagePath, String loanStatus) {
         this.id = id;
         this.name = name;
         this.author = author;
@@ -35,7 +35,7 @@ public class Book {
         return description;
     }
 
-    public String getRating() {
+    public int getRating() {
         return rating;
     }
 

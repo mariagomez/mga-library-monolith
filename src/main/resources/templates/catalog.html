@@ -42,9 +42,10 @@
                     </div>
                 </div>
                 <div class="tile is-8 is-vertical is-parent">
-                    <div class="tile is-child box">
-                        <p class="title is-5"><strong>Title</strong></p>
-                        <p th:text="${book.name}" />
+                    <div class="tile is-child box notification">
+                        <p class="title is-2">
+                            <strong><span th:text="${book.name}" /></strong>
+                        </p>
                     </div>
                     <div class="tile is-child box">
                         <p class="title is-5"><strong>Author</strong></p>
@@ -56,7 +57,11 @@
                     </div>
                     <div class="tile is-child box">
                         <p class="title is-5"><strong>Rating</strong></p>
-                        <p th:text="${book.rating}" />
+                        <p>
+                            <span class="icon" th:each="star:${#numbers.sequence(1,book.rating)}">
+                                <img class="image is-" th:src="@{images/star.jpg}" />
+                            </span>
+                        </p>
                     </div>
                 </div>
             </div>

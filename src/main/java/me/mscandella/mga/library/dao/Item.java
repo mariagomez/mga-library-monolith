@@ -13,14 +13,14 @@ public class Item {
     private String author;
     @Lob
     private String description;
-    private String rating;
+    private int rating;
     private String loanStatus;
     private String imagePath;
 
     protected Item() {
     }
 
-    public Item(String name, String author, String description, String rating, String loanStatus, String imagePath) {
+    public Item(String name, String author, String description, int rating, String loanStatus, String imagePath) {
         this.name = name;
         this.author = author;
         this.description = description;
@@ -41,7 +41,7 @@ public class Item {
         return description;
     }
 
-    public String getRating() {
+    public int getRating() {
         return rating;
     }
 
