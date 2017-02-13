@@ -27,7 +27,7 @@ public class CatalogControllerTest {
     @Test
     public void shouldReturnAListOfBooks() throws Exception {
         MvcResult mvcResult = mockMvc.perform(get("/catalog"))
-                .andExpect(view().name("Catalog"))
+                .andExpect(view().name("catalog"))
                 .andExpect(status().isOk())
                 .andExpect(model().hasNoErrors())
                 .andReturn();
