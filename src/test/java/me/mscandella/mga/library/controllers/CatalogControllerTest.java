@@ -18,16 +18,16 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(controllers = IndexController.class)
-public class IndexControllerTest {
+@WebMvcTest(controllers = CatalogController.class)
+public class CatalogControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     public void shouldReturnAListOfBooks() throws Exception {
-        MvcResult mvcResult = mockMvc.perform(get("/index"))
-                .andExpect(view().name("index"))
+        MvcResult mvcResult = mockMvc.perform(get("/catalog"))
+                .andExpect(view().name("Catalog"))
                 .andExpect(status().isOk())
                 .andExpect(model().hasNoErrors())
                 .andReturn();
