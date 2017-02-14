@@ -7,7 +7,7 @@ import static org.hamcrest.core.Is.is;
 
 
 public class IndexControllerUnitTest {
-    
+
     @Test
     public void shouldReturnRedirectToCatalog() throws Exception {
         String resultView = new IndexController().index();
