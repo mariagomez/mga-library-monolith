@@ -56,4 +56,8 @@ public class Item {
     public Long getId() {
         return id;
     }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
 }
