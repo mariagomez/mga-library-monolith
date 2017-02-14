@@ -64,6 +64,6 @@ public class CatalogControllerTest {
         when(bookRepository.findOne(anyLong())).thenReturn(item);
         mockMvc.perform(post("/catalog/borrow", item.getId()))
                 .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/non"));
+                .andExpect(redirectedUrl("/catalog"));
     }
 }
